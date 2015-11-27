@@ -1,0 +1,14 @@
+package nl.quintor.ee.cdi;
+
+import javax.enterprise.util.Nonbinding;
+import javax.inject.Qualifier;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Qualifier
+public @interface Property {
+
+    @Nonbinding
+    String name() default "";
+}
